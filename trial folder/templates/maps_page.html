@@ -1,0 +1,38 @@
+{% extends "home.html" %}
+
+{% block content %}
+<body class="body_bg_maps">
+
+
+  <div class="">
+    <form action="{{ url_for('homepage') }}">
+      <button class="h1_btn" name="button">
+        <h1 class="other_title myfont"> SPARK </h1>
+      </button>
+    </form>
+
+  </div>
+<p class="map_buttons">
+<!-- <button class="button-19" onclick="document.getElementById('map_frame').src='{{ url_for('map1') }}'"type="button" name="map1_button">Get Map 1</button>
+<button class="button-19" onclick="document.getElementById('map_frame').src='{{ url_for('map2') }}'"type="button" name="map2_button">Get Map 2</button>
+<button class="button-19" onclick="document.getElementById('map_frame').src='{{ url_for('map3') }}'"type="button" name="map3_button">Get Map 3</button> -->
+    <button class="btn_with_bg2" onclick="document.getElementById('map_frame').src='{{ url_for('tweets') }}'"type="button" name="map3_button">Get tweets</button>
+    <button class="btn_with_bg2" onclick="document.getElementById('map_frame').src='{{ url_for('map1') }}'"type="button" name="map3_button">Get Map</button>
+    <button class="btn_with_bg2" onclick="document.getElementById('map_frame').src='{{ url_for('static',filename='images/graph1.png') }}'"type="button" name="map3_button">Get graph 1</button>
+    <button class="btn_with_bg2" onclick="document.getElementById('map_frame').src='{{ url_for('static',filename='images/graph2.png') }}'"type="button" name="map3_button">Get graph 2</button>
+    <button class="btn_with_bg2" onclick="document.getElementById('map_frame').src='{{ url_for('static',filename='images/graph3.png') }}'"type="button" name="map3_button">Get graph 3</button>
+</p>
+<iframe id="map_frame" src="{{ url_for('map1') }}" width=60% height="1000" >
+</iframe>
+<script>
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
+
+        function reloadIFrame() {
+            ('reloading..');
+            document.getElementById('iframe').contentWindow.location.reload();
+        }
+    </script>
+</body>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="body_bg_home">
+
+
+<div class="is_inbl">
+  <h1 class="other_title myfont"> SPARK </h1>
+  <h2 class="subtitle2">Estimator of Prediction of Riots and Violence</h2>
+</div>
+<!-- <h2 class="subtitle">Enter a keyword filter: </h2>
+
+  <form  method="POST" action="{{ url_for('map_options') }}">
+    <input type="text" name="keyword_btn" value="keyword">
+    <input type="text" name="region_btn" value="region">
+    <input type="text" name="date_btn" value="date">
+    <button class="button-19-form">Analyze</button>
+  </form> -->
+
+
+
+  <!-- <div class="bg-image img1"></div>
+  <div class="bg-image img2"></div> -->
+
+
+  <div class="registration-form zindex is_inbl" >
+          <form method="POST" action="{{ url_for('map_options') }}">
+              <!-- <div class="form-icon">
+                  <span><i class="icon icon-user"></i></span>
+              </div> -->
+              <!-- <h2 class="form_subtitle">Enter a keyword filter: </h2> -->
+              <div class="form-group">
+                  <input type="text" name="keyword_btn" class="form-control item" placeholder="KeyWord">
+              </div>
+              <div class="form-group">
+                  <input type="text" name = "region_btn" class="form-control item" placeholder="Region">
+              </div>
+              <div class="form-group">
+                  <input type="text" name = "radius_btn" class="form-control item" placeholder="Radius in km">
+              </div>
+              <div class="form-group">
+                  <input type="date" name = "from_date_btn" class="form-control item" placeholder="From Date">
+              </div>
+              <div class="form-group">
+                  <input type="date" name = "to_date_btn" class="form-control item" placeholder="To Date">
+              </div>
+              <!-- <div class="form-group">
+                  <input type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control item" id="birth-date" placeholder="Birth Date">
+              </div> -->
+              <div class="form-group">
+                  <button class ="btn btn-block analyze">Analyze</button>
+              </div>
+          </form>
+
+
+
+</body>
+{% endblock %}

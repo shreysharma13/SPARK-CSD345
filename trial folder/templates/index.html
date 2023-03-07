@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  {% block content %}
+  <body class="body_bg_index">
+
+    <div class="">
+      <h1 class="main_title myfont"> SPARK </h1>
+      <h2 class="subtitle">Estimator of Prediction of Riots and Violence</h2>
+    </div>
+
+
+    <div class="">
+
+      <form action="{{ url_for('homepage') }}">
+        <button class="btn_with_bg">Start</button>
+      </form>
+    </div>
+    <!-- <h1 class="main_title"> Spark </h1>
+    <form action="{{ url_for('homepage') }}">
+      <button class="button-19">Start</button>
+    </form>
+     <a class="button-19" href="{{ url_for('homepage') }}"> Start </a> -->
+
+    {% endblock %}
+
+  </body>
+</html>
